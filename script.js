@@ -31,10 +31,10 @@ function lowercaseHandler(string){
 
 function capitalizeHandler(string){
     
-   if(!input.value===``){
-    realStr=string;
-    return realStr[0].toUpperCase()+ realStr.slice(1);
-   }
+  
+    if(input.value.length>0){
+        return string[0].toUpperCase()+ string.slice(1);
+    }
 
 }
 
@@ -128,7 +128,7 @@ function trimHandler(string){
 function renderdata(){
 
     lowercaseword.textContent=lowercaseHandler(input.value);
-    debugger
+    
     uppercaseword.textContent=uppercaseHandler(input.value);
     
     camelcaseword.textContent=camelcaseHandler(input.value);
